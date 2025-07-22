@@ -55,3 +55,29 @@ donateButtons.forEach(button => {
   }
 
   fetchUNNews();
+
+
+
+
+  //for store contact data form in local storage 
+
+  document.querySelector("form").addEventListener("submit", function (e) {
+    e.preventDefault(); 
+
+    const name = document.querySelector("input[type='text']").value;
+    const email = document.querySelector("input[type='email']").value;
+    const subject = document.querySelectorAll("input[type='text']")[1].value;
+    const message = document.querySelector("textarea").value;
+
+    const formData = {
+      name: name,
+      email: email,
+      subject: subject,
+      message: message,
+      submittedAt: new Date().toISOString()
+    };
+
+    localStorage.setItem("contactForm", JSON.stringify(formData));
+
+    alert("We will email you soon !");
+  });
