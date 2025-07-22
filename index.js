@@ -28,3 +28,7 @@ donateButtons.forEach(button => {
     donationForm.scrollIntoView({ behavior: 'smooth' });
   });
 });
+
+
+
+

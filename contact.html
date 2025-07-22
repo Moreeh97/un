@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>United Nation | Peace, dignity and equality
+on a healthy planet</title>
+<link rel="stylesheet" href="index.css">
+</head>
+
+<style>
+    #contact {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #f9f9f9;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+#contact h2 {
+  text-align: center;
+  font-size: 32px;
+  color: #0066cc;
+  margin-bottom: 10px;
+}
+
+#contact h3 {
+  text-align: left;
+  font-size: 22px;
+  color: #4c4c4c;
+  margin-bottom: 20px;
+}
+
+#contact p {
+  line-height: 1.7;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+form fieldset {
+  border: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form label {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+  padding: 12px 15px;
+  font-size: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #0066cc;
+  outline: none;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+#submit {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#submit:hover {
+  background-color: #0066cc;
+}
+
+</style>
+<body>
+    <header class="top header">
+        <div class="logo">
+            <img src="../un/assests/images/un-logo.png" alt="United Nations Logo">
+        </div>
+        <h1>United Nations</h1>
+        <p>Peace, dignity and equality on a healthy planet</p>
+    </header>
+
+
+    <nav class="top nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a>
+                <ul class="submenu">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">Member States</a></li>
+                    <li><a href="#">Main Bodies</a></li>
+                    <li><a href="#">Secretary-General</a></li>
+                    <li><a href="#">Secretariat</a></li>
+                    <li><a href="#">UN System</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Emblem and Flag</a></li>
+                    <li><a href="#">UN Charter</a></li>
+                    <li><a href="#">UDHR</a></li>
+                    <li><a href="#">ICJ Statute</a></li>
+                    <li><a href="#">Nobel Peace Prize</a></li>
+                </ul>
+            </li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="search">
+            <input type="text" placeholder="Search...">
+            <button type="submit">Search</button>
+        </div>
+    </nav>
+
+
+
+    <div id="contact">
+        <h2>Contact Us </h2>
+        <h3>Dear Visitors,</h3>
+    <p>
+      You can contact the Public Inquiries team with general questions about the UN, or about the website, by using the form below.
+      Please use this form for employment-related questions.
+      For media inquiries, please contact the Spokesperson's office or Media accreditation.
+      We are not able to respond to any other questions or comments.
+      Before submitting your question, please review our Frequently Asked Questions, Rights and Permissions, and our Fraud Alert.
+    </p>
+
+<form>
+    <fieldset>
+        <Label>Your Name</Label>
+        <input type="text" placeholder="input your name" required>
+
+        <Label>Your Email Address</Label>
+        <input type="email" placeholder="input your email Address" required>
+
+
+        <Label>Subject</Label>
+        <input type="text" placeholder="input your Subject" required>
+
+        <Label>Your Message</Label>
+        <textarea placeholder="input your message" required>
+
+            <button id="submit" type="submit" value="submit"></button>
+    </fieldset>
+</form>
+
+    </div>
+
+
+
+
+
+<script src="index.js"></script>
+<footer class="footer">
+    <p>&copy; 2023 United Nations. All rights reserved.</p>
+</footer>
+</body>
+</html>
