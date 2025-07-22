@@ -9,33 +9,22 @@ document.addEventListener('DOMContentLoaded', function() {
 }   );
 
 
-const joinButton = document.querySelector('.join-button');
-if (joinButton) {
-    joinButton.addEventListener('click', function() {
-        alert('Thank you for your interest in joining the United Nations!');
-    });
-}
+const donateButtons = document.querySelectorAll('[id$="-donate"]');
 
+const donationForm = document.getElementById('donationForm');
 
-//this function for donation form
-function showDonationForm(organization) {
-    const form = document.querySelector('.donation-form');
-    form.style.display = 'block';
-    
-    const donateButton = document.querySelector('.donate-button');
-    donateButton.addEventListener('click', function() {
-        const amount = document.getElementById('amount').value;
-        const currency = document.getElementById('currency').value;
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
+donateButtons.forEach(button => {
+  button.addEventListener('click', function (e) {
+    e.preventDefault();
+    donationForm.style.display = 'block';
+    donationForm.scrollIntoView({ behavior: 'smooth' });
+  });
+});
 
-        if (amount && name && email) {
-            alert(`Thank you ${name} for your donation of ${amount} ${currency} to ${organization}!`);
-            form.reset();
-            form.style.display = 'none';
-        } else {
-            alert('Please fill out all fields.');
-        }
-    });
-}
- 
+ donateButtons.forEach(button => {
+  button.addEventListener('click', function (e) {
+    e.preventDefault();
+    donationForm.classList.add('show');
+    donationForm.scrollIntoView({ behavior: 'smooth' });
+  });
+});
