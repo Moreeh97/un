@@ -60,6 +60,95 @@
     .organization-content a:hover {
       background: #c57d00;
     }
+
+    .donation-form {
+      display: none;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: 40px auto;
+    }
+
+    .donation-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .donation-form p {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #666;
+    }
+
+    .donation-form fieldset {
+      border: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .donation-form label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .donation-form input[type="text"],
+    .donation-form input[type="email"],
+    .donation-form input[type="number"],
+    .donation-form select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .donation-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .donation-form button {
+      width: 100%;
+      padding: 10px;
+      background: #e59c00;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s ease;
+    }
+
+    .donation-form button:hover {
+      background: #c57d00;
+    }
+
+    .top.header {
+      background: linear-gradient(to right, #444, #222);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .top.header .logo img {
+      width: 100px;
+      height: auto;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
   </style>
 <body>
     <header class="top header">
@@ -105,45 +194,77 @@
  <section class="organizations">
 
   <div class="organization">
-    <img src="images/unicef.jpg" alt="UNICEF">
+    <img src="../un/assests/images/unicef.png" alt="UNICEF">
     <div class="organization-content">
       <h3>UNICEF</h3>
-      <a href="#">donate</a>
+      <a href="#" id="unicef-donate">donate</a>
     </div>
   </div>
 
   <div class="organization">
-    <img src="images/unwamen.jpg" alt="UN Women">
+    <img src="../un/assests/images/unwomen.png" alt="UN Women">
     <div class="organization-content">
       <h3>UN Women</h3>
-      <a href="#">donate</a>
+      <a href="#" id="unwomen-donate">donate</a>
     </div>
   </div>
 
   <div class="organization">
-    <img src="images/unfap.jpg" alt="UNFPA">
+    <img src="../un/assests/images/unfap.png" alt="UNFPA">
     <div class="organization-content">
       <h3>UNFPA</h3>
-      <a href="#">donate</a>
+      <a href="#" id="unfpa-donate">donate</a>
     </div>
   </div>
 
   <div class="organization">
-    <img src="images/unhcr.jpg" alt="UNHCR">
+    <img src="../un/assests/images/unhcr.png" alt="UNHCR">
     <div class="organization-content">
       <h3>UNHCR</h3>
-      <a href="#">donate</a>
+      <a href="#" id="unhcr-donate">donate</a>
     </div>
   </div>
 </section>
 
-    <div>
+    <div class="donation-form">
         <h2>Make a Donation</h2>
         <p>Your contribution helps us promote peace, dignity, and equality for all.</p>
         <form action="#" method="post">
+          <fieldset>
+            <legend>Donation Form</legend>
             <label for="amount">Donation Amount:</label>
-            <input type="number" id="amount" name="amount" required>
+            <input type="number" id="amount" name="amount" required><br>
+            <label for="currency">Currency:</label>
+            <select id="currency" name="currency" required>
+              <option value="usd">USD</option>
+              <option value="eur">EUR</option>
+              <option value="gbp">GBP</option>
+            </select>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Your Email:</label>  
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message (optional):</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+            <label for="payment">Payment Method:</label>
+            <select id="payment" name="payment" required>
+              <option value="credit_card">Credit Card</option>
+              <option value="paypal">PayPal</option>
+              <option value="bank_transfer">Bank Transfer</option>
+            </select>
+            <label for="terms">
+              <input type="checkbox" id="terms" name="terms" required>
+              I agree to the <a href="#">terms and conditions</a>.
+            </label>
+            <br>
+            <label for="privacy">
+              <input type="checkbox" id="privacy" name="privacy" required>
+              I agree to the <a href="#">privacy policy</a>.
+            </label>
+            <br>
+
             <button type="submit">Donate</button>
+          </fieldset>
         </form>
     </div>
 
