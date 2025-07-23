@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="146px" height="113px" viewBox="0 0 146 113" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>slice-146x113</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon-Globl-digi-compact" transform="translate(-339.000000, -115.000000)" fill="#6DD400" font-family="Helvetica-Light, Helvetica" font-size="18" font-weight="300">
+            <text id="10101110101001">
+                <tspan x="0" y="18">10101110101001110101011101011100101</tspan>
+            </text>
+        </g>
+        <circle id="Oval" stroke="#FFFFFF" stroke-width="3" cx="73" cy="56" r="49.5"></circle>
+        <circle id="Oval" stroke="#FFFFFF" stroke-width="3" cx="73" cy="56" r="32.5"></circle>
+        <circle id="Oval" fill="#F2DF0A" cx="73" cy="56" r="11"></circle>
+        <g id="Group-5" transform="translate(72.285217, 56.234829) rotate(1.000000) translate(-72.285217, -56.234829) translate(53.785217, 33.234829)" stroke="#F2DF0A" stroke-linecap="square" stroke-width="2">
+            <g id="Group-4" transform="translate(19.500000, 22.500000) rotate(23.000000) translate(-19.500000, -22.500000) translate(9.000000, 3.000000)">
+                <line x1="15" y1="7.43133227" x2="19.5938094" y2="1" id="Line" transform="translate(17.296905, 4.215666) rotate(-9.000000) translate(-17.296905, -4.215666) "></line>
+                <line x1="1" y1="38.4313323" x2="5.59380941" y2="32" id="Line" transform="translate(3.296905, 35.215666) rotate(-9.000000) translate(-3.296905, -35.215666) "></line>
+            </g>
+            <g id="Group-4" transform="translate(18.664463, 23.241845) scale(-1, 1) rotate(25.000000) translate(-18.664463, -23.241845) translate(8.164463, 3.741845)">
+                <line x1="15.2877401" y1="7.04922659" x2="19.658745" y2="0.949729664" id="Line" transform="translate(17.473243, 3.999478) rotate(-9.000000) translate(-17.473243, -3.999478) "></line>
+                <line x1="1.04086134" y1="37.8662196" x2="5.41186623" y2="31.7667227" id="Line" transform="translate(3.226364, 34.816471) rotate(-9.000000) translate(-3.226364, -34.816471) "></line>
+            </g>
+        </g>
+        <g id="cross" transform="translate(50.793943, 34.234905)" stroke="#F2DF0A" stroke-linecap="square" stroke-width="2">
+            <g id="Group-4" transform="translate(22.050603, 21.719186) rotate(64.000000) translate(-22.050603, -21.719186) translate(11.550603, 2.719186)">
+                <line x1="15.898794" y1="6.86970341" x2="20.4926035" y2="0.438371147" id="Line" transform="translate(18.195699, 3.654037) rotate(-9.000000) translate(-18.195699, -3.654037) "></line>
+                <line x1="1" y1="37.4313323" x2="5.59380941" y2="31" id="Line" transform="translate(3.296905, 34.215666) rotate(-9.000000) translate(-3.296905, -34.215666) "></line>
+            </g>
+            <g id="Group-4" transform="translate(22.115870, 21.930479) scale(-1, 1) rotate(-23.000000) translate(-22.115870, -21.930479) translate(12.115870, 2.430479)">
+                <line x1="14.7579664" y1="6.73799061" x2="19.1289713" y2="0.638493682" id="Line" transform="translate(16.943469, 3.688242) rotate(-11.000000) translate(-16.943469, -3.688242) "></line>
+                <line x1="1.03390195" y1="38.0687519" x2="5.40490683" y2="31.9692549" id="Line" transform="translate(3.219404, 35.019003) rotate(-13.000000) translate(-3.219404, -35.019003) "></line>
+            </g>
+        </g>
+        <circle id="Oval" fill="#FFFFFF" cx="121" cy="68" r="6"></circle>
+        <circle id="Oval" fill="#FFFFFF" cx="61" cy="8" r="6"></circle>
+        <circle id="Oval" fill="#FFFFFF" cx="23" cy="63" r="6"></circle>
+        <circle id="Oval" fill="#FFFFFF" cx="48" cy="34" r="6"></circle>
+    </g>
+</svg>

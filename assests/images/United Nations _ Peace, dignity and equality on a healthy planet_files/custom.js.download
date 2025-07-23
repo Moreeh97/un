@@ -1,0 +1,147 @@
+jQuery(document).ready(function () {
+
+	jQuery("#main-menu li.top-level > a").on({
+
+  		click: function(e) {
+		
+		   if (jQuery(window).width() <= 768) {	
+
+			jQuery("#main-menu > li.top-level > ul.subnav").removeClass("subnav-active");
+
+			if (jQuery(this).siblings("ul.subnav").length > 0) {
+				
+				var clickedParent = jQuery(this).parent();
+				
+				// submenu is open	
+				if (jQuery(this).siblings("ul.subnav-active-menu").length > 0) {
+					// close this subnav
+					jQuery("a", clickedParent).removeClass("active-menu");	
+					jQuery("ul.subnav", clickedParent).removeClass("subnav-active-menu");
+				// submenu is closed
+				} else {
+					// close all other open subnavs
+					jQuery("#main-menu > li.top-level > ul.subnav.subnav-active-menu").removeClass("subnav-active-menu");
+					// open this subnav
+					jQuery("a", clickedParent).addClass("active-menu");
+					jQuery("ul.subnav", clickedParent).addClass("subnav-active-menu");
+				}
+				// disable active clicks
+				e.stopPropagation();
+				e.preventDefault();
+			} else {
+				// no menu, direct click to another page
+				// do nothing
+			}
+
+		   }
+
+		}
+	    
+	});
+
+        jQuery("#main-menu li.top-level").hover(
+	
+                // in
+                function() {
+
+		   if (jQuery(window).width() > 768) {
+
+                        // main nav
+                        // add subnav-active to current
+                        jQuery("a", this).addClass("active-menu");
+
+                        // sub-nav
+                        // add subnav-active to current
+                        jQuery("ul.subnav", this).addClass("subnav-active-menu");
+		    }	   
+                },
+                // out
+                function() {
+
+		    if (jQuery(window).width() > 768) {
+                        jQuery("a", this).removeClass("active-menu");
+                        jQuery("ul.subnav", this).removeClass("subnav-active-menu");
+		    }	    
+                }
+
+        );
+
+        // accessibility: open submenu with keydown
+        jQuery("#main-menu li.top-level").keydown(
+        
+            // in
+            function(e) {
+                if(e.which == 40){ // arrowdown
+                    e.preventDefault();
+                	if (jQuery(window).width() > 768) {
+                        // main nav
+                        // add subnav-active to current
+                        jQuery("a", this).addClass("active-menu");
+
+                        // sub-nav
+                        // add subnav-active to current
+                        jQuery("ul.subnav", this).addClass("subnav-active-menu");
+                        }	
+                    }
+                }
+        );
+
+        jQuery("#main-menu li.top-level").keydown(
+        
+            // in
+            function(e) {
+                if(e.which == 38){ // arrowup
+                    e.preventDefault();
+                	if (jQuery(window).width() > 768) {
+                        jQuery("a", this).removeClass("active-menu");
+                        jQuery("ul.subnav", this).removeClass("subnav-active-menu");
+                        }	
+                    }
+                }
+        );
+
+	// Adding active class to front-page main meu, known Drupal error
+	jQuery("body.front li.menu-1576 a", this).addClass("active-menu");
+	jQuery("body.front li.menu-1576 ul.subnav", this).addClass("subnav-active-menu");
+	
+	jQuery("body.front li.menu-1576").hover(
+	
+		// in
+		function() {
+			// main nav
+			// remove active from all
+			//jQuery("#main-menu > li.top-level > a").removeClass("active");
+			// then add subnav-active to current
+			jQuery("a", this).addClass("active-menu");			
+		
+			// sub-nav
+			// remove subnav-active from all
+			//jQuery("#main-menu > li.top-level > ul.subnav").removeClass("subnav-active");
+			// then add subnav-active to current
+			jQuery("ul.subnav", this).addClass("subnav-active-menu");		
+		},
+		// out 	
+		function() {
+			jQuery("a", this).addClass("active-menu");
+			jQuery("ul.subnav", this).addClass("subnav-active-menu");		
+		}		
+	);
+	
+		
+	//jQuery(function () {
+		if (jQuery("body.front div.unorg-home-square div").hasClass("views-field-field-video-embed-a-la-iseek")) {
+    		jQuery("div.views-field-field-video-embed-a-la-iseek").parent().addClass("hide-title");
+		}
+		if (jQuery("body.front div.unorg-home-letterbox div").hasClass("views-field-field-video-embed-a-la-iseek")) {
+    		jQuery("div.views-field-field-video-embed-a-la-iseek").parent().addClass("hide-title");
+		}
+	//});
+
+	// swoosh from live now button to WebTV section
+	jQuery("#live_now_button").click(function (){
+	    jQuery('html, body').animate({
+		scrollTop: jQuery("#un_org_home_live_now").offset().top
+	    }, 2000);
+    });
+	
+});
