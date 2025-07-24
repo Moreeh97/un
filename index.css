@@ -213,7 +213,7 @@ nav .search button:hover {
 
 .structure {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* توزيع مرن */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
   gap: 20px;
   padding: 40px;
   text-align: center;
